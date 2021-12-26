@@ -1,0 +1,14 @@
+Player 1 starting position: 4
+Player 2 starting position: 8
+
+
+### Some notes:
+
+I start on N rolls. I have scored X, and am in position Y. There are f(N,X,Y) universes in which this is possible.
+What can I roll?
+- 1 way  to roll a 3. Add 1*f(N,X,Y) to f(N+1, X+(Y+3)$10, (Y+3)$10).
+- 3 ways to roll a 4. Add 3*f(N,X,Y) to f(N+1, X+(Y+4)$10, (Y+4)$10).
+...
+- 1 way  to roll a 9. Add 1*f(N,X,Y) to f(N+1, X+(Y+9)$10, (Y+9)$10).
+
+We iterate from X=0 to X=20. You never roll if X is 21 or higher.
